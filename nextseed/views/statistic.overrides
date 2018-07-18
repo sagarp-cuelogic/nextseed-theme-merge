@@ -1,0 +1,63 @@
+/*******************************
+         Theme Overrides
+*******************************/
+.ui.statistic{
+    position:relative;
+    padding-left:@relative16px;
+    &:before{
+        content:"";
+        width:3px;
+        height:100%;
+        background:@theme-primary;
+        position:absolute;
+        left:0;
+    }
+    i.icon{
+        margin:0 0 0 @7px;
+    }
+    a.label{
+        font-weight:700;
+        color:@theme-primary;
+    }
+    >.label~.value{
+        margin:0.15em 0;
+    }
+}
+.investment-summary .ui.statistic{
+    padding-left:0;
+    &:before{
+        display:none;
+    }
+}
+.tabular-wrap, .sticky-notification{
+    .ui.statistic{
+        position:relative;
+        padding-left:1em;
+        &:before{
+            content:"";
+            width:3px;
+            height:100%;
+            background:@statGradient;
+            position:absolute;
+            left:0;
+        }
+        i.icon{
+            margin:0 0 0 @7px;
+        }
+    }
+}
+.sticky-notification{
+    .ui.statistic{
+        margin:0;
+        &:before{
+            background:@theme-primary;
+        }
+        .value{
+            font-size:@16px !important;
+            text-transform:none;
+        }
+        .label{
+            font-size:@14px;
+        }
+    }
+}

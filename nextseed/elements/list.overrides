@@ -1,0 +1,186 @@
+/*******************************
+         Theme Overrides
+*******************************/
+
+.filter-meta{
+    .ui.horizontal.list{
+        .item{
+            font-size:@12px;
+            color:@inverse-text;
+        }
+        a.item{
+            color:@inverse-secondary-text;
+            &:hover, &:focus, &.active{
+                color:@theme-primary;
+            }
+        }
+    }
+}
+.secondary-menu{
+	.ui.horizontal.celled.list{
+        a.item{
+            font-size:@14px;
+            font-weight:900;
+            padding:@16px @20px !important;
+            border-left:@tertiary-text 1px solid;
+            color:@white;
+            &:hover, &:focus, &.active{
+                color:@link-color !important;
+                background-color:@lighten-bg-color;
+            }
+        }
+	}
+}
+
+.tabular-wrap .ui.segment{
+    .ui.horizontal.list.link{
+        margin-bottom:@28px;
+        .item{
+            color:@tertiary-text;
+            border-bottom:2px solid transparent;
+            &:hover, &:focus, &.active{
+                color:@primary-text;
+                border-color:@theme-primary;
+            }
+        }
+    }
+}
+
+.page-header-section{
+    .ui.list{
+        &.horizontal{
+            margin-left:@14px;
+            vertical-align:middle;
+        }
+        .item{
+            padding:0;
+            font-size:@14px;
+        }
+        .list>.item .description, >.item .description{
+            color:@white;
+        }
+        i.circular.icon{
+            &.red{
+                box-shadow:0 0 0 0.1em @red;
+            }
+            &.green{
+                box-shadow:0 0 0 0.1em @green;
+            }
+        }
+    }
+}
+
+.update-list{
+	background-color:@light-bg-color;
+    .ui.list{
+        margin-left:@5px;
+        border-left:@border-color 1px solid;
+        .item{
+            padding-left:@21px;
+            font-size:@13px;
+            font-weight:700;
+            line-height:@16px;
+            color:@quaternary-text;
+            position:relative;
+            &:before{
+                content:"";
+                width:9px;
+                height:9px;
+                border-radius:@5px;
+                background-color:@quaternary-text;
+                position:absolute;
+                left:-1px;
+                top:50%;
+                z-index:2;
+                transform:translate(-50%, -50%);
+                border:2px solid white;
+                box-shadow:0px 0px 4px 1px @quaternary-text;
+            }
+            &:hover, &.active{
+                color:@primary-text;
+                &:before{
+                    background-color:@link-color;
+                    box-shadow:0 0 4px 1px @link-color;
+                }
+            }
+            &:first-child:after, &:last-child:after{
+                height:50%;
+                width:1px;
+                visibility:visible;
+                position:absolute;
+                left:-1px;
+                z-index:1;
+                background-color:@light-bg-color;
+            }
+            &:first-child{
+                &:before{
+                    top:~"calc(50% - 6px)";
+                }
+                &:after{
+                    top:0;
+                }
+            }
+            &:last-child{
+                &:before{
+                    top:~"calc(50% + 6px)";
+                }
+                &:after{
+                    bottom:0;
+                }
+            }
+        }
+    }
+}
+
+.ui.list.horizontal.feature-list{
+    margin:@30px 0;
+    > .item{
+        font-weight:700;
+        text-align:center;
+        margin-left:@70px;
+        .icon{
+            display:block;
+            padding:0;
+            margin:0 auto @10px;
+            color:@theme-primary;
+        }
+    }
+}
+
+//  Used for message section
+.ui.card.messages{
+    flex-direction:row;
+    max-height:~"calc(100vh - 232px)";
+    .ui.list{
+        width:30%;
+        margin:0;
+        overflow:auto;
+        border-radius:@6px 0 0 @6px !important;
+        border-right:@borderColor 1px solid;
+        >.item{
+            padding:@12px;
+            position:relative;
+            .header{
+                font-weight:700;
+                color:@fullBlack;
+            }
+            h4.header{
+                font-size:@16px;
+            }
+            .extra{
+                font-size:@13px;
+                color:@quaternary-text;
+                position:absolute;
+                right:12px;
+            }
+        }
+        .content{
+            + .content{
+                padding-top:@7px;
+            }
+            .description{
+                margin-top:@5px;
+            }
+        }
+    }
+}

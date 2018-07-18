@@ -1,0 +1,112 @@
+/*******************************
+         Theme Overrides
+*******************************/
+//  Buttons style CSS
+.ui{
+    &.button, &.buttons .button{
+        + .button{
+            margin-left:@10px;
+        }
+        &.link-button{
+            padding:0;
+            background-color:transparent !important;
+            box-shadow:none !important;
+            &:hover, &:focus, &:active{
+                box-shadow:none !important;
+            }
+            &.green{
+                color:@theme-primary;
+                &:hover, &:focus, &:active{
+                    color:@theme-primary;
+                }
+            }
+            &.red{
+                color:@highlight-primary;
+                &:hover, &:focus, &:active{
+                    color:darken(@highlight-primary, 10%);
+                }
+            }
+        }
+        &.ghost-button{
+            background-color:transparent;
+            box-shadow:none;
+            &.tiny{
+                font-size:@13px;
+            }
+            &.mini{
+                font-size:@14px;
+            }
+            &.mini, &.tiny{
+                padding:0.5em 1em;
+            }
+            &.green{
+                color:@theme-primary;
+                &:hover, &:focus, &:active{
+                    color:@white;
+                    background-color:@theme-primary;
+                }
+            }
+            &.red{
+                color:@highlight-primary;
+                &:hover, &:focus, &:active{
+                    color:@white;
+                    background-color:@highlight-primary;
+                }
+            }
+            &.violet{
+                color:@violet;
+                &:hover, &:focus, &:active{
+                    color:darken(@violet, 10%);
+                    background-color:transparent;
+                }
+            }
+        }
+    }
+}
+
+.ui.button, .ui.buttons .button{
+    &.relaxed{
+        padding-left:@42px;
+        padding-right:@42px;
+        &.very{
+            padding-left:@64px;
+            padding-right:@64px;
+        }
+    }
+}
+
+.ui.buttons{
+    .ui.button{
+        border-radius:6px;
+    }
+}
+
+.ui.button.multistep__btn{
+    background:@white;
+    color:@theme-primary;
+    letter-spacing:0;
+    box-shadow:0 0 16px 2px fade(@fullBlack, 15%) !important;
+    margin:0;
+    position:absolute;
+    top:50%;
+    &.disabled{
+        background:@border-light;
+        color:@border-color;
+        opacity:1 !important;
+    }
+    >.icon{
+        width:auto;
+    }
+    &.prev{
+        left:0;
+        transform:translate(-50%, -50%);
+    }
+    &.next{
+        right:0;
+        transform:translate(50%, -50%);
+        &.active{
+            background:@theme-primary;
+            color:@white;
+        }
+    }
+}

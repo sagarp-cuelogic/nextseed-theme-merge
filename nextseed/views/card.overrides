@@ -1,0 +1,273 @@
+/*******************************
+         Theme Overrides
+*******************************/
+.card.form-card, .cards>.card.form-card{
+    border-radius:@relative10px;
+    padding:@32px;
+    background-color:@lighter-bg-color;
+    box-shadow:@boxShadow;
+    h3{
+        font-size:18px;
+        margin-bottom:@22px;
+    }
+    h4{
+        font-size:14px;
+        color:@secondary-text;
+        .checkbox label{
+            font-weight:normal;
+        }
+    }
+    .grid.divided{
+        .column{
+            padding:0 @46px;
+            &:first-child{
+                padding-left:1rem;
+            }
+            &:last-child{
+                padding-right:1rem;
+            }
+        }
+    }
+    .sb-avatar{
+        width:40px;
+        height:40px;
+        margin-right:@7px;
+        .sb-avatar__text{
+            width:40px;
+            height:40px;
+            font-size:@14px;
+            line-height:40px;
+        }
+    }
+}
+.ui.stackable.cards>.card{
+    @media only screen and (max-width : @largestMobileScreen){
+        padding:@32px !important;
+    }
+}
+
+.ui.card.flexible{
+    width:auto;
+    display:inline-flex;
+    margin:0;
+}
+.ui.styled.accordion{
+    .accordion .content, .content{
+        .card > .content{
+            padding:1em 1em;
+        }
+    }
+}
+.ui.card, .ui.cards>.card{
+    &.welcome-card{
+        >.content{
+            padding:@25px;
+            .item{
+                i.icon{
+                    width:auto;
+                    margin:0 1rem 0 0;
+                    color:@theme-primary;
+                }
+                .header:not(.ui){
+                    margin-top:0;
+                    font-size:@20px;
+                    line-height:@24px;
+                    font-weight:400;
+                    color:@fullBlack;
+                }
+            }
+            .ui.mini.image{
+                width:54px;
+                margin:0 @18px 0 0;
+            }
+            >.meta{
+                font-family:@pageFont;
+                font-size:@16px;
+                text-transform:none;
+                color:@quaternary-text;
+                letter-spacing:1px;
+                margin:@7px 0 0;
+            }
+        }
+    }
+    &.card-spacer{
+        padding:@22px;
+    }
+    .content{
+        .ui.header .icon{
+            color:@quaternary-text;
+        }
+        .status{
+            margin:0;
+            padding:0.5rem 1rem;
+            display:inline-block;
+        }
+        .action-meta{
+            display:inline-block;
+            font-size:@12px;
+            vertical-align:top;
+            margin-left:@10px;
+            color:@quaternary-text;
+            >b{
+                color:@fullBlack;
+            }
+        }
+        &.padded{
+            padding:@30px;
+            &.very{
+                padding:@42px;
+            }
+        }
+        &.beneficiaries{
+            .status{
+                padding:0;
+                position:absolute;
+                font-size:@13px;
+                font-weight:700;
+                right:30px;
+                top:20px;
+                > .time-stamp{
+                    margin-right:@10px;
+                    font-weight:400;
+                    color:@border-color;
+                }
+            }
+        }
+        .field-wrap{
+            padding:@25px @40px;
+            margin:@14px 0;
+            &:last-child{
+                margin-bottom:0;
+            }
+        }
+    }
+}
+
+.ui.card>.content:not(:first-child),
+.ui.cards>.card>.content:not(:first-child){
+    border-top-color:@border-light;
+}
+.ui.card{
+    .ui.menu{
+        margin:0;
+        overflow:hidden;
+    }
+    .meta{
+        margin-bottom:1rem;
+        font-size:@14px;
+        color:@quaternary-text;
+        text-transform:uppercase;
+    }
+    [class*="horizontally padded"].ui.grid{
+        .content{
+            padding:@21px;
+            margin:-@14px;
+            + .content{
+                margin-top:@14px;
+            }
+            &:not(:last-child){
+                border-bottom:@border-light 1px solid;
+            }
+        }
+    }
+    .header.with-icon i.icon{
+        font-size:24px;
+        color:@highlight-tertiary;
+        vertical-align:top;
+        &:not(:first-of-type){
+            margin-left:@20px;
+        }
+    }
+    &.linked-bank{
+        .item{
+            .extra{
+                margin-bottom:@7px;
+                color:@quaternary-text;
+            }
+            .header{
+                font-weight:700;
+                color:@fullBlack;
+            }
+        }
+    }
+}
+.ui{
+    &.card, &.cards>.card{
+        >.content>.header+.description,
+        >.content>.meta+.description,
+        >.content>.header+.description,
+        >.content>.meta+.description{
+            &:not(:last-child){
+                margin-bottom:1.5em;
+            }
+        }
+    }
+}
+.bank-details{
+    .item{
+        .meta{
+            font-size:@12px;
+            color:@quaternary-text;
+            text-transform:uppercase;
+        }
+    }
+}
+.sticky-notification{
+    .ui.card .meta{
+        font-size:@13px;
+        text-transform:none;
+    }
+}
+
+.ui.cards.steps-card{
+    .description{
+        font-size:16px;
+        i.icon.numbar{
+            height:26px;
+            width:26px;
+            line-height:26px;
+            background:@theme-primary;
+            padding:0;
+            margin:0 .75rem 0 0;
+            border-radius:50%;
+            &[data-icon]:before{
+                content:attr(data-icon) !important;
+                font-family:@pageFont;
+                font-size:@16px;
+                color:@inverse-text;
+            }
+        }
+        &.disabled{
+            color:@border-color;
+            i.icon.numbar{
+                background:@light-bg-color;
+            }
+        }
+    }
+}
+
+.ui.card.verification{
+    min-height:210px;
+    text-align:center;
+    justify-content:center;
+    .content{
+        flex-grow:0;
+        p{
+            margin:@21px 0;
+        }
+    }
+    .icon{
+        color:@border-color;
+        &.corner{
+            font-size:.35em;
+            right:-.4em;
+        }
+    }
+    &.disabled{
+        color:@border-color;
+    }
+    &.done{
+        background-color:@inverse-darken;
+        box-shadow:none;
+    }
+}
