@@ -1,0 +1,346 @@
+/*******************************
+         Theme Overrides
+*******************************/
+.ui.form{
+    .field{
+        position:relative;
+        &.dropdown-field{
+            margin-left:-@14px;
+            margin-right:-@14px;
+            padding:0 @14px;
+        }
+        >label{
+            display:inline-block;
+            line-height:@18px;
+        }
+        &.otp-field{
+            margin:3rem 0;
+            label{
+                font-size:@14px;
+            }
+            .ui.input > input{
+                max-width:290px;
+                margin:0 auto;
+                padding-left:13px;
+                letter-spacing:38px;
+                border:none;
+                background-image:linear-gradient(to left, @border-color 75%, rgba(0, 0, 0, 0) 0%);
+                background-position:bottom;
+                background-size:51px 1px;
+                background-repeat:repeat-x;
+                background-position-x:35px;
+                &:focus{
+                    background-image:linear-gradient(to left, @primary-one 75%, rgba(0, 0, 0, 0) 0%);
+                }
+            }
+        }
+    }
+    .fields .field, .fields .wide.field{
+        padding-left:@gutterWidth;
+        padding-right:@gutterWidth;
+        margin-bottom:@14px;
+    }
+    .error:not(.field){
+        color:@negativeTextColor;
+    }
+    label{
+        i.icon{
+            margin:0 0 0 @5px;
+            font-size:@14px;
+            color:@neutral-middark;
+        }
+    }
+    input:not([type]),
+    input[type=date],
+    input[type=datetime-local],
+    input[type=email],
+    input[type=file],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=time],
+    input[type=url],
+    textarea{
+        border-bottom:@border-color 1px solid;
+    }
+    /*  Inverted Form  */
+    &.inverted{
+        input:not([type]),
+        input[type=date],
+        input[type=datetime-local],
+        input[type=email],
+        input[type=file],
+        input[type=number],
+        input[type=password],
+        input[type=search],
+        input[type=tel],
+        input[type=text],
+        input[type=time],
+        input[type=url]{
+            &:focus{
+                border-color:@primary-one;
+            }
+            &::placeholder{
+                color:@neutral-middark;
+            }
+        }
+    }
+    .select-option{
+        .field{
+            padding:0 @14px;
+            >label{
+                display:none;
+            }
+            .ui.selection.dropdown{
+                border:none;
+            }
+            .dropdown-effect{
+                top:0;
+                border-radius:@6px;
+            }
+        }
+    }
+    p.field-error{
+        font-size:@12px;
+        line-height:@14px;
+        color:@highlight-primary;
+    }
+    .additional-field{
+        padding:0 !important;
+        margin-bottom:@14px;
+    }
+    &.cropper-wrap{
+        position:relative;
+        max-height:70vh;
+        text-align:center;
+        .file-uploader{
+            border:none;
+            background:@neutral-offwhite;
+            .file-uploader-inner{
+                padding:@14px;
+                margin:5rem 0;
+                display:inline-block;
+                border-radius:@4px;
+                border:#7d7d7d 1px dashed;
+            }
+        }
+        .ReactCrop.ReactCrop--fixed-aspect ~ .file-uploader{
+            display:none;
+        }
+    }
+}
+.card{
+    &.editable{
+        position:relative;
+        &.editing{
+            z-index:2;
+        }
+        .actions{
+            position:absolute;
+            top:20px;
+            right:30px;
+            .button{
+                padding:0.5rem 1rem 0.5rem;
+                text-transform:uppercase;
+            }
+            a{
+                margin:0 1rem;
+                font-size:@13px;
+                line-height:@20px;
+                font-weight:500;
+                text-transform:uppercase;
+                color:@primary-one;
+                &:last-child{
+                    margin-right:0;
+                }
+                &:hover, &:focus, &:active{
+                    color:darken(@primary-one, 8%);
+                }
+                &.negative{
+                    color:@neutral-middark;
+                    &:hover, &:focus, &:active{
+                        color:darken(@neutral-middark, 8%);
+                    }
+                }
+            }
+        }
+        .ui.form{
+            .fields{
+                margin:0em;
+                padding:0.5em 0;
+                &:nth-child(odd){
+                    background-color:@neutral-offwhite;
+                }
+                .field{
+                    padding:0 @gutterWidth;
+                }
+            }
+            .ui.label{
+                font-size:@13px;
+                font-weight:400;
+                line-height:@20px;
+                color:@neutral-middark;
+                padding:0.5em 0;
+                background-color:transparent;
+            }
+            input:not([type]),
+            input[type=date],
+            input[type=datetime-local],
+            input[type=email],
+            input[type=file],
+            input[type=number],
+            input[type=password],
+            input[type=search],
+            input[type=tel],
+            input[type=text],
+            input[type=time],
+            input[type=url]{
+                font-weight:500;
+                line-height:@20px;
+                color:@neutral;
+                padding:0.5em 0;
+                border-width:0;
+                background-color:transparent;
+            }
+        }
+    }
+}
+
+.page-header-section{
+    .ui.input.inverted{
+        .icon{
+            color:@white;
+            opacity:1;
+        }
+    }
+}
+
+.notification-box{
+    .ui.form.inverted{
+        input:not([type]),
+        input[type=date],
+        input[type=datetime-local],
+        input[type=email],
+        input[type=file],
+        input[type=number],
+        input[type=password],
+        input[type=search],
+        input[type=tel],
+        input[type=text],
+        input[type=time],
+        input[type=url]{
+            padding-left:0;
+            padding-right:0;
+        }
+    }
+}
+
+.react-datepicker-wrapper,
+.react-datepicker-wrapper .react-datepicker__input-container{
+    display:block;
+}
+.react-datepicker-wrapper .react-datepicker__input-container{
+    &:before{
+        content:"\e90c";
+        font-family:'nextseed';
+        color:@neutral-middark;
+        position:absolute;
+        top:50%;
+        transform:translate(0%,-50%);
+    }
+    > input{
+        padding-left:@28px !important;
+    }
+}
+
+.file-uploader-wrap{
+    max-width:360px;
+    label{
+        font-size:13px;
+        font-weight:700;
+        margin-bottom:@4px;
+        display:inline-block;
+    }
+}
+
+.file-uploader{
+    min-height:58px;
+    padding:@14px;
+    border-radius:@4px;
+    border:@neutral-offdark 1px dashed;
+    position:relative;
+    color:@link-color;
+    line-height:@28px;
+    font-weight:700;
+    text-align:center;
+    cursor:pointer;
+    .icon{
+        height:auto;
+        margin-right:@6px;
+    }
+    span{
+        color:@fullBlack;
+    }
+    input[type=file]{
+        opacity:0;
+        width:100%;
+        // height:56px;
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        cursor:pointer;
+    }
+    &.attached{
+        color:@fullBlack;
+        border:none;
+        background:@border-light;
+        text-align:left;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        .remove{
+            margin:0 0 0 @7px;
+            line-height:1;
+            color:@link-color;
+            position:relative;
+            z-index:9;
+            @media only screen and (max-width:@largestMobileScreen){
+                margin:@7px 0 @7px @7px;
+            }
+            &:hover{
+                color:darken(@link-color, 10%);
+            }
+        }
+    }
+}
+.file-uploader-large{
+    .file-uploader{
+        width:250px;
+        height:140px;
+        margin:0 auto;
+        display:table;
+        > div{
+            display:table-cell;
+            vertical-align:middle;
+        }
+        .icon{
+            display:block;
+            margin:0 auto;
+        }
+        input[type=file]{
+            height:138px;
+        }
+        &.attached{
+            display:block;
+        }
+    }
+}
+
+.field.error{
+    .ui.labeled .ui.label{
+        border-color:@negativeTextColor;
+    }
+}

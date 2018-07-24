@@ -1,0 +1,14 @@
+/*******************************
+         Theme Overrides
+*******************************/
+.ui.labeled.input{
+    &:not([class*="corner labeled"]) .label:first-child{
+        padding-left:0;
+    }
+    >.label{
+        background-color:transparent;
+        border-radius:0;
+        border:none;
+        border-bottom:@border-color 1px solid;
+    }
+}

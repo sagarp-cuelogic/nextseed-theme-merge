@@ -1,0 +1,20 @@
+/*******************************
+         Theme Overrides
+*******************************/
+.compact{
+    > .ui.grid{
+        margin:0;
+        >.column:not(.row){
+            padding:0;
+        }
+    }
+}
+
+.ui.grid{
+    >.column{
+        &.update-list, &.update-details{
+            padding-top:@28px;
+            padding-bottom:@28px;
+        }
+    }
+}
